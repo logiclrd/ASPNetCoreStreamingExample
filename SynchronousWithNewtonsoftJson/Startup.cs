@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -31,6 +32,13 @@ namespace ASPNetCoreStreamingExample.SynchronousWithNewtonsoftJson
       services.AddSingleton(serializer);
 
       services.AddControllers().AddNewtonsoftJson();
+
+      // Allow synchronous I/O from Newtonsoft.Json.
+      services.Configure<KestrelServerOptions>(
+        options =>
+        {
+          options.AllowSynchronousIO = true;
+        });
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

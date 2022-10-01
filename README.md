@@ -41,9 +41,18 @@ When running, this project presents a web server with a single endpoint.
 
 * Controller endpoint: `/v1/sing`
 
+This project hosts itself on port 5100. A sample URL is:
+
+* [http://localhost:5100/v1/sing](http://localhost:5100/v1/sing)
+
 ### `SynchronousWithNewtonsoftJson`
 
 When running, this project presents a web server with two endpoints. These endpoints have identical behaviour, but one is implemented using an ASP.NET Core Controller and the other using ASP.NET Core Middleware.
 
 * Controller Endpoint: `/v1/sing`
 * Middleware Endpoint: `/middleware/sing`
+
+This project hosts itself on port 5000. Sample URLs are:
+
+* [http://localhost:5000/v1/sing](http://localhost:5000/v1/sing)
+* [http://localhost:5000/middleware/sing](http://localhost:5000/middleware/sing)
