@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ASPNetCoreStreamingExample.Model
+namespace ASPNetCoreStreamingExample.SynchronousWithNewtonsoftJson.Model
 {
   public interface ILyricsSource
   {

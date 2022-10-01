@@ -1,3 +1,5 @@
+﻿using ASPNetCoreStreamingExample.AsynchronousWithSystemTextJson.Model;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 
@@ -5,10 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-using ASPNetCoreStreamingExample.Middleware;
-using ASPNetCoreStreamingExample.Model;
-
-namespace ASPNetCoreStreamingExample
+namespace ASPNetCoreStreamingExample.AsynchronousWithSystemTextJson
 {
   public class Startup
   {
@@ -31,9 +30,6 @@ namespace ASPNetCoreStreamingExample
     {
       if (env.IsDevelopment())
         app.UseDeveloperExceptionPage();
-
-      // Register our middleware.
-      app.UseSongLyrics();
 
       app.UseRouting();
       app.UseAuthorization();

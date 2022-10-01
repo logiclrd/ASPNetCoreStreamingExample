@@ -1,12 +1,10 @@
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-using Microsoft.Extensions.Hosting;
-
-namespace ASPNetCoreStreamingExample
+namespace ASPNetCoreStreamingExample.AsynchronousWithSystemTextJson
 {
-  public class Program
-  {
+	public class Program
+	{
     public static void Main(string[] args)
     {
       CreateWebHostBuilder(args).Build().Run();

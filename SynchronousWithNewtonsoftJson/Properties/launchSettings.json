@@ -9,22 +9,12 @@
   },
   "$schema": "http://json.schemastore.org/launchsettings.json",
   "profiles": {
-    "IIS Express": {
-      "commandName": "IISExpress",
-      "launchBrowser": true,
-      "launchUrl": "v1/sing",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
-    "TestIEnumerableStreaming": {
+    "SynchronousWithNewtonsoftJson": {
       "commandName": "Project",
-      "launchBrowser": true,
-      "launchUrl": "v1/sing",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://localhost:5000"
+      "applicationUrl": "http://0.0.0.0:5000"
     }
   }
 }

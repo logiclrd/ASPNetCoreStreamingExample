@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-using ASPNetCoreStreamingExample.Model;
-using ASPNetCoreStreamingExample.Results;
+using ASPNetCoreStreamingExample.AsynchronousWithSystemTextJson.Model;
+using System.Collections.Generic;
 
-namespace ASPNetCoreStreamingExample.Controllers
+namespace ASPNetCoreStreamingExample.AsynchronousWithSystemTextJson.Controllers
 {
   [Route("/v1")]
   public class SongLyricsController : Controller
@@ -16,9 +16,9 @@ namespace ASPNetCoreStreamingExample.Controllers
     }
 
     [HttpGet("sing")]
-    public IActionResult PerformSong()
+    public IAsyncEnumerable<string> PerformSong()
     {
-      return new SongLyricsResult(_lyricsSource);
+      return _lyricsSource.GetSongLyrics();
     }
   }
 }
